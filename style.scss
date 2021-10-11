@@ -1,0 +1,141 @@
+.container {
+    padding: 0 160px;
+    @media (min-width:768px) and (max-width:1440px) {
+        padding: 0 80px;
+    }
+    @media (min-width:320px) and (max-width:768px) {
+        padding: 0 32px;
+    }
+}
+
+.image {
+    background: var(--white300);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    @media (min-width:320px) and (max-width:768px) {
+        display: none;
+    }
+}
+
+body {
+    display: flex;
+}
+
+.login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-self: center; */
+    align-items: center;
+    justify-content: center;
+    @media (min-width:320px) and (max-width:768px) {
+        width: 100%;
+    }
+    
+
+    p {
+        font-family: 'Merriweather Regular';
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: var(--dark);
+        margin-bottom: 7px;
+        width: 50%;
+        @media (min-width:320px) and (max-width:768px) {
+            width: 100%;
+        }
+    }
+    h2 {
+        font-family: 'Merriweather Regular';
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+        color: var(--dark);
+        font-weight: 700;
+        margin-bottom: 28px;
+        width: 50%;
+        @media (min-width:320px) and (max-width:768px) {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-family: 'Lato Regular';
+            color: #1A202C;
+            padding: 11px 0;
+        }
+        #email, #password {
+            border: 1px solid #E8E8E8;
+            border-radius: 5px;
+            width: 350px;
+            padding: 16px;
+            @media (min-width:320px) and (max-width:768px) {
+                width: calc(100vw - 65px);
+            }
+        }
+
+        button {
+            background: #04C45C;
+            border-radius: 5px;
+            color: #fff;
+            font-family: 'Lato Regular';
+            font-size: 1.6rem;
+            font-weight: 700;
+            padding: 15px 0;
+        }
+        a.google {
+            margin-top: 15px;
+            background: #1a202c;
+            text-decoration: none;
+            color: #fff;
+
+            font-size: 1.6rem;
+            font-family: 'Lato Regular';
+            font-weight: 700;
+            padding: 15px 0;
+            border-radius: 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 10px;
+
+            &::before {
+                content: url(image/google.svg);
+            }
+        }
+
+    }
+    &__remember {
+        padding: 26px 0;
+        display: flex;
+        justify-content: space-between;
+        input{
+            border-radius: 50% !important;
+        }
+        #check {
+            position: relative;
+            &::after {
+                content: 'Lembre de mim';
+                white-space: nowrap;
+                position: absolute;
+                left: 20px;
+            }
+        }
+        a {
+            text-decoration: none;
+            font-family: 'Lato Regular';
+            font-size: 1.4rem;
+            color: #2B6CB0;
+        }
+    }
+}
+
+
+
